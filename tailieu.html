@@ -3,13 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <title>Tài liệu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 16px;
+    }
+
+    .card {
+      background: #fff;
+      width: 100%;
+      max-width: 380px;
+      padding: 28px 22px;
+      border-radius: 24px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 16px;
+      color: #222;
+    }
+
+    .links a {
+      display: block;
+      text-decoration: none;
+      background: #f1f3f5;
+      color: #333;
+      padding: 14px;
+      border-radius: 14px;
+      margin-bottom: 12px;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+
+    .links a:hover {
+      background: #667eea;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .back {
+      margin-top: 16px;
+      display: inline-block;
+      text-decoration: none;
+      color: #667eea;
+      font-weight: 500;
+    }
+  </style>
 </head>
+
 <body>
-  <h2>Tài liệu học tập</h2>
-  <ul>
-    <li><a href="#">128 Vấn đề Lâm sàng</a></li>
-    <li><a href="#">Tài liệu ĐH – SDH</a></li>
-  </ul>
-  <a href="index.html">⬅ Quay về trang chính</a>
+  <div class="card">
+    <h1>📚 Tài liệu học tập</h1>
+
+    <div class="links">
+      <a href="https://padlet.com/vothanhnhanmed98/h-nh-th-c-sr8fb4rzh4edxl1m" target="_blank">
+        📁 128 Vấn đề Lâm sàng
+      </a>
+
+      <a href="https://drive.google.com/drive/folders/1-F19fUmIWaMUzJAB0ceVc45fywtyo0bS" target="_blank">
+        🖼️ Drive hình ảnh
+      </a>
+
+      <a href="https://drive.google.com/drive/folders/1U7HdGPexuVDBuJv9YUn_5GSrns-8kd_x" target="_blank">
+        📖 Tài liệu ĐH – SDH
+      </a>
+    </div>
+
+    <a class="back" href="index.html">⬅ Quay về trang chính</a>
+  </div>
 </body>
 </html>
