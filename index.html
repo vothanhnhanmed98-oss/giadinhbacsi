@@ -1,197 +1,229 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<title>Gia đình bác sĩ</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>Gia đình bác sĩ</title>
 
-<style>
-:root{
-  --bg:#eef1f7;
-  --card:#ffffff;
-  --text:#1f2937;
-  --sub:#6b7280;
-  --pri:#4f46e5;
-  --btn:#f3f4f6;
-}
-body.dark{
-  --bg:#0f172a;
-  --card:#111827;
-  --text:#e5e7eb;
-  --sub:#9ca3af;
-  --pri:#818cf8;
-  --btn:#1f2937;
-}
-body{
-  margin:0;
-  min-height:100vh;
-  background:var(--bg);
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  padding:16px;
-  transition:.3s;
-}
-.card{
-  width:100%;
-  max-width:390px;
-  background:var(--card);
-  border-radius:28px;
-  padding:26px 22px;
-  box-shadow:0 25px 50px rgba(0,0,0,.15);
-  color:var(--text);
-}
-.menu{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  font-size:14px;
-}
-.menu a{
-  text-decoration:none;
-  color:var(--pri);
-  font-weight:600;
-}
-.toggle{
-  cursor:pointer;
-}
-.avatar{
-  width:112px;
-  height:112px;
-  border-radius:50%;
-  object-fit:cover;
-  margin:18px auto 12px;
-  display:block;
-  border:4px solid var(--pri);
-}
-h1{
-  text-align:center;
-  font-size:22px;
-  margin:6px 0;
-}
-.desc{
-  text-align:center;
-  font-size:14px;
-  color:var(--sub);
-  margin-bottom:16px;
-}
-.notice{
-  background:var(--btn);
-  padding:12px;
-  border-radius:14px;
-  font-size:14px;
-  text-align:center;
-  margin-bottom:18px;
-}
-.qr{
-  text-align:center;
-  margin-bottom:16px;
-}
-.qr img{
-  width:150px;
-  border-radius:14px;
-}
-.actions button{
-  width:100%;
-  border:none;
-  background:var(--btn);
-  padding:12px;
-  border-radius:14px;
-  margin-bottom:10px;
-  font-weight:600;
-  cursor:pointer;
-}
-.actions button:hover{
-  background:var(--pri);
-  color:#fff;
-}
-.links a{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  text-decoration:none;
-  background:var(--btn);
-  padding:14px;
-  border-radius:16px;
-  margin-bottom:12px;
-  color:var(--text);
-  font-weight:600;
-  transition:.2s;
-}
-.links a:hover{
-  background:var(--pri);
-  color:#fff;
-  transform:translateY(-2px);
-}
-footer{
-  text-align:center;
-  font-size:12px;
-  color:var(--sub);
-  margin-top:14px;
-}
-</style>
+  <!-- SEO -->
+  <meta name="description" content="Gia đình bác sĩ – chia sẻ tài liệu y khoa, học tập và kinh nghiệm lâm sàng." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Icon -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      padding-top: 80px;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255,255,255,0.95);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    header .logo {
+      font-weight: bold;
+      font-size: 18px;
+      color: #667eea;
+    }
+
+    header nav a {
+      margin-left: 16px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    header nav a:hover {
+      color: #667eea;
+    }
+
+    /* ===== SECTION CHUNG ===== */
+    .section {
+      background: #fff;
+      max-width: 900px;
+      margin: 24px auto;
+      padding: 32px;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+
+    .section h2 {
+      margin-bottom: 12px;
+      color: #333;
+    }
+
+    .section p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* ===== PROFILE ===== */
+    .profile {
+      text-align: center;
+    }
+
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #667eea;
+      margin-bottom: 12px;
+    }
+
+    /* ===== BUTTON ===== */
+    .btn {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 12px 22px;
+      background: #667eea;
+      color: #fff;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      background: #5563d6;
+      transform: translateY(-2px);
+    }
+
+    /* ===== LINK BOX ===== */
+    .links a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #f1f3f5;
+      padding: 14px;
+      border-radius: 14px;
+      margin-bottom: 12px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+
+    .links a:hover {
+      background: #667eea;
+      color: #fff;
+    }
+
+    /* ===== QR ===== */
+    .qr-box {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .qr-box img {
+      width: 160px;
+      margin-top: 12px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      text-align: center;
+      color: #eee;
+      font-size: 13px;
+      margin: 24px 0;
+    }
+
+    @media (max-width: 600px) {
+      header nav {
+        display: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
-<div class="card">
 
-  <div class="menu">
-    <a href="index.html">🏠 Home</a>
-    <a href="gioithieu.html">👨‍⚕️ Giới thiệu</a>
-    <a href="tailieu.html">📚 Tài liệu</a>
-    <div class="toggle" onclick="toggleDark()">🌙</div>
-  </div>
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="logo">Gia đình bác sĩ</div>
+  <nav>
+    <a href="#gioithieu">Giới thiệu</a>
+    <a href="#tailieu">Tài liệu</a>
+    <a href="#gui">Gửi tài liệu</a>
+    <a href="#lienhe">Liên hệ</a>
+  </nav>
+</header>
 
-  <img src="avatar.jpg" class="avatar">
+<!-- ===== GIỚI THIỆU ===== -->
+<section class="section profile" id="gioithieu">
+  <img src="avatar.jpg" alt="Ảnh đại diện">
+  <h2>Thành Nhân – Thúy Vi</h2>
+  <p>Gia đình bác sĩ · Chia sẻ tài liệu & kiến thức y khoa</p>
+</section>
 
-  <h1>Thành Nhân – Thúy Vi</h1>
-  <div class="desc">Gia đình bác sĩ · Chia sẻ tài liệu & học tập</div>
-
-  <div class="notice">
-    📢 Cập nhật tài liệu học tập mới
-  </div>
-
-  <div class="qr">
-    <p>📱 Quét QR truy cập nhanh</p>
-    <img src="qr.png">
-  </div>
-
-  <div class="actions">
-    <button onclick="copyLink()">📋 Copy link website</button>
-    <button onclick="downloadQR()">⬇️ Tải QR code</button>
-  </div>
+<!-- ===== TÀI LIỆU ===== -->
+<section class="section" id="tailieu">
+  <h2>📚 Tài liệu học tập</h2>
 
   <div class="links">
-    <a href="tailieu.html"><i class="fa-solid fa-book"></i> Xem tài liệu</a>
-    <a href="https://www.facebook.com/vo.thanh.nhan.623473/" target="_blank">
-      <i class="fa-brands fa-facebook"></i> Liên hệ Facebook
+    <a href="https://padlet.com/vothanhnhanmed98/128-v-n-l-m-s-ng-x48tzoyyutdel665" target="_blank">
+      <i class="fa-solid fa-folder-open"></i> 128 Vấn đề lâm sàng
+    </a>
+
+    <a href="https://drive.google.com/drive/folders/1-F19fUmIWaMUzJAB0ceVc45fywtyo0bS" target="_blank">
+      <i class="fa-brands fa-google-drive"></i> Drive hình ảnh
+    </a>
+
+    <a href="https://drive.google.com/drive/folders/1U7HdGPexuVDBuJv9YUn_5GSrns-8kd_x" target="_blank">
+      <i class="fa-solid fa-book"></i> Tài liệu ĐH – SDH
     </a>
   </div>
+</section>
 
-  <footer>© 2026 Gia đình bác sĩ</footer>
-</div>
+<!-- ===== GỬI TÀI LIỆU ===== -->
+<section class="section" id="gui">
+  <h2>📤 Gửi tài liệu</h2>
+  <p>Bạn có tài liệu hay? Hãy chia sẻ để cùng nhau học tập.</p>
 
-<script>
-function toggleDark(){
-  document.body.classList.toggle("dark");
-  localStorage.setItem("dark",document.body.classList.contains("dark"));
-}
-if(localStorage.getItem("dark")==="true"){
-  document.body.classList.add("dark");
-}
-function copyLink(){
-  navigator.clipboard.writeText(window.location.href);
-  alert("Đã copy link website!");
-}
-function downloadQR(){
-  const a=document.createElement("a");
-  a.href="qr.png";
-  a.download="QR-GiaDinhBacSi.png";
-  a.click();
-}
-</script>
+  <!-- ĐỔI LINK GOOGLE FORM CỦA BẠN -->
+  <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeFr8eYBnnZ3nfd7fNo_7oi6lgDYPjJ3irpUxEzQHfdSsswWg/viewform?usp=publish-editor" target="_blank">
+    Gửi tài liệu ngay
+  </a>
+</section>
+
+<!-- ===== QR + LIÊN HỆ ===== -->
+<section class="section" id="lienhe">
+  <h2>📬 Liên hệ & truy cập nhanh</h2>
+
+  <div class="qr-box">
+    <p>Quét QR để mở website</p>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://medteam.vn" alt="QR code">
+  </div>
+
+  <p style="margin-top:16px;">
+    <a class="btn" href="https://www.facebook.com/vo.thanh.nhan.623473/" target="_blank">
+      Facebook liên hệ
+    </a>
+  </p>
+</section>
+
+<footer>
+  © 2026 Gia đình bác sĩ
+</footer>
+
 </body>
 </html>
