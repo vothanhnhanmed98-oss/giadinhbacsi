@@ -1,59 +1,138 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>Gia đình bác sĩ</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Gia đình bác sĩ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
-  <style>
-    :root {
-      --bg:#f0f2f5;--card:#fff;--text:#222;--sub:#666;--btn:#f1f3f5;--pri:#667eea;
-    }
-    body.dark {
-      --bg:#121212;--card:#1e1e1e;--text:#fff;--sub:#bbb;--btn:#2a2a2a;--pri:#8f9bff;
-    }
-    body{
-      margin:0;min-height:100vh;background:var(--bg);
-      font-family:Arial;display:flex;justify-content:center;align-items:center;
-      padding:16px;transition:.3s;
-    }
-    .card{
-      background:var(--card);color:var(--text);
-      width:100%;max-width:380px;padding:26px;border-radius:24px;
-      box-shadow:0 20px 40px rgba(0,0,0,.2);text-align:center;
-    }
-    .menu{
-      display:flex;justify-content:space-between;margin-bottom:10px;font-size:14px;
-    }
-    .menu a{color:var(--pri);text-decoration:none;font-weight:500}
-    .toggle{cursor:pointer;color:var(--pri)}
-    img.avatar{
-      width:110px;height:110px;border-radius:50%;object-fit:cover;
-      border:4px solid var(--pri);margin:16px 0;
-    }
-    h1{margin:6px 0;font-size:22px}
-    .desc{color:var(--sub);font-size:14px;margin-bottom:14px}
-    .notice{
-      background:var(--btn);padding:10px;border-radius:12px;font-size:14px;margin-bottom:16px;
-    }
-    .qr img{
-      width:150px;border-radius:12px;margin:10px 0;
-    }
-    .actions button{
-      width:100%;padding:12px;border-radius:12px;border:none;
-      background:var(--btn);margin-bottom:10px;cursor:pointer;font-weight:500;
-    }
-    .actions button:hover{background:var(--pri);color:#fff}
-    .links a{
-      display:flex;gap:10px;align-items:center;justify-content:center;
-      background:var(--btn);color:var(--text);text-decoration:none;
-      padding:14px;border-radius:14px;margin-bottom:12px;transition:.25s;
-    }
-    .links a:hover{background:var(--pri);color:#fff;transform:translateY(-2px)}
-    footer{font-size:12px;color:var(--sub);margin-top:14px}
-  </style>
+<style>
+:root{
+  --bg:#eef1f7;
+  --card:#ffffff;
+  --text:#1f2937;
+  --sub:#6b7280;
+  --pri:#4f46e5;
+  --btn:#f3f4f6;
+}
+body.dark{
+  --bg:#0f172a;
+  --card:#111827;
+  --text:#e5e7eb;
+  --sub:#9ca3af;
+  --pri:#818cf8;
+  --btn:#1f2937;
+}
+body{
+  margin:0;
+  min-height:100vh;
+  background:var(--bg);
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:16px;
+  transition:.3s;
+}
+.card{
+  width:100%;
+  max-width:390px;
+  background:var(--card);
+  border-radius:28px;
+  padding:26px 22px;
+  box-shadow:0 25px 50px rgba(0,0,0,.15);
+  color:var(--text);
+}
+.menu{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:14px;
+}
+.menu a{
+  text-decoration:none;
+  color:var(--pri);
+  font-weight:600;
+}
+.toggle{
+  cursor:pointer;
+}
+.avatar{
+  width:112px;
+  height:112px;
+  border-radius:50%;
+  object-fit:cover;
+  margin:18px auto 12px;
+  display:block;
+  border:4px solid var(--pri);
+}
+h1{
+  text-align:center;
+  font-size:22px;
+  margin:6px 0;
+}
+.desc{
+  text-align:center;
+  font-size:14px;
+  color:var(--sub);
+  margin-bottom:16px;
+}
+.notice{
+  background:var(--btn);
+  padding:12px;
+  border-radius:14px;
+  font-size:14px;
+  text-align:center;
+  margin-bottom:18px;
+}
+.qr{
+  text-align:center;
+  margin-bottom:16px;
+}
+.qr img{
+  width:150px;
+  border-radius:14px;
+}
+.actions button{
+  width:100%;
+  border:none;
+  background:var(--btn);
+  padding:12px;
+  border-radius:14px;
+  margin-bottom:10px;
+  font-weight:600;
+  cursor:pointer;
+}
+.actions button:hover{
+  background:var(--pri);
+  color:#fff;
+}
+.links a{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  text-decoration:none;
+  background:var(--btn);
+  padding:14px;
+  border-radius:16px;
+  margin-bottom:12px;
+  color:var(--text);
+  font-weight:600;
+  transition:.2s;
+}
+.links a:hover{
+  background:var(--pri);
+  color:#fff;
+  transform:translateY(-2px);
+}
+footer{
+  text-align:center;
+  font-size:12px;
+  color:var(--sub);
+  margin-top:14px;
+}
+</style>
 </head>
 
 <body>
@@ -67,10 +146,13 @@
   </div>
 
   <img src="avatar.jpg" class="avatar">
+
   <h1>Thành Nhân – Thúy Vi</h1>
   <div class="desc">Gia đình bác sĩ · Chia sẻ tài liệu & học tập</div>
 
-  <div class="notice">📢 Cập nhật tài liệu mới</div>
+  <div class="notice">
+    📢 Cập nhật tài liệu học tập mới
+  </div>
 
   <div class="qr">
     <p>📱 Quét QR truy cập nhanh</p>
@@ -93,20 +175,23 @@
 </div>
 
 <script>
-  function toggleDark(){
-    document.body.classList.toggle("dark");
-    localStorage.setItem("dark",document.body.classList.contains("dark"));
-  }
-  if(localStorage.getItem("dark")==="true") document.body.classList.add("dark");
-
-  function copyLink(){
-    navigator.clipboard.writeText(window.location.href);
-    alert("Đã copy link website!");
-  }
-  function downloadQR(){
-    const a=document.createElement("a");
-    a.href="qr.png";a.download="QR-GiaDinhBacSi.png";a.click();
-  }
+function toggleDark(){
+  document.body.classList.toggle("dark");
+  localStorage.setItem("dark",document.body.classList.contains("dark"));
+}
+if(localStorage.getItem("dark")==="true"){
+  document.body.classList.add("dark");
+}
+function copyLink(){
+  navigator.clipboard.writeText(window.location.href);
+  alert("Đã copy link website!");
+}
+function downloadQR(){
+  const a=document.createElement("a");
+  a.href="qr.png";
+  a.download="QR-GiaDinhBacSi.png";
+  a.click();
+}
 </script>
 </body>
 </html>
