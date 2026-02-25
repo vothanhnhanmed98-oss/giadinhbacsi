@@ -2,10 +2,12 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
-  <title>Gia đình bác sĩ</title>
+  <title>Gia đình bác sĩ | Tài liệu & kiến thức y khoa</title>
 
   <!-- SEO -->
   <meta name="description" content="Gia đình bác sĩ – chia sẻ tài liệu y khoa, học tập và kinh nghiệm lâm sàng." />
+  <meta name="keywords" content="y khoa, tài liệu y khoa, lâm sàng, bác sĩ, học y">
+  <meta name="author" content="Gia đình bác sĩ – Thành Nhân & Thúy Vi">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Icon -->
@@ -20,7 +22,7 @@
     }
 
     body {
-      background: linear-gradient(135deg, #667eea, #764ba2);
+      background: linear-gradient(135deg, #6a85ff, #9f7aea);
       padding-top: 80px;
     }
 
@@ -29,7 +31,7 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(255,255,255,0.95);
+      background: rgba(255,255,255,0.96);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -57,16 +59,21 @@
 
     /* ===== SECTION CHUNG ===== */
     .section {
-      background: #fff;
       max-width: 900px;
       margin: 24px auto;
       padding: 32px;
-      border-radius: 20px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+      border-radius: 22px;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+      border-left: 6px solid #667eea;
     }
 
+    .profile { background: linear-gradient(180deg, #e8f0ff, #ffffff); }
+    .docs { background: linear-gradient(180deg, #f3e8ff, #ffffff); }
+    .upload { background: linear-gradient(180deg, #e9f7ef, #ffffff); }
+    .contact { background: linear-gradient(180deg, #fff7e6, #ffffff); }
+
     .section h2 {
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       color: #333;
     }
 
@@ -99,7 +106,7 @@
       border-radius: 14px;
       text-decoration: none;
       font-weight: 500;
-      transition: 0.2s;
+      transition: 0.25s;
     }
 
     .btn:hover {
@@ -107,24 +114,46 @@
       transform: translateY(-2px);
     }
 
-    /* ===== LINK BOX ===== */
+    /* ===== LINKS TÀI LIỆU ===== */
     .links a {
       display: flex;
       align-items: center;
-      gap: 10px;
-      background: #f1f3f5;
+      gap: 12px;
       padding: 14px;
-      border-radius: 14px;
-      margin-bottom: 12px;
+      border-radius: 16px;
+      margin-bottom: 14px;
       text-decoration: none;
-      color: #333;
+      color: #fff;
       font-weight: 500;
-      transition: 0.2s;
+      transition: 0.3s;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+
+    .links a i {
+      font-size: 18px;
+      min-width: 22px;
+    }
+
+    .link-padlet {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+    }
+
+    .link-drive {
+      background: linear-gradient(135deg, #34a853, #0f9d58);
+    }
+
+    .link-docs {
+      background: linear-gradient(135deg, #ff9800, #ff5722);
+    }
+
+    .link-onenote {
+      background: linear-gradient(135deg, #7c4dff, #512da8);
     }
 
     .links a:hover {
-      background: #667eea;
-      color: #fff;
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25);
+      filter: brightness(1.08);
     }
 
     /* ===== QR ===== */
@@ -134,17 +163,17 @@
     }
 
     .qr-box img {
-      width: 160px;
+      width: 170px;
       margin-top: 12px;
-      border-radius: 12px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
     }
 
     footer {
       text-align: center;
       color: #eee;
       font-size: 13px;
-      margin: 24px 0;
+      margin: 32px 0;
     }
 
     @media (max-width: 600px) {
@@ -153,12 +182,10 @@
       }
     }
   </style>
-  
 </head>
 
 <body>
 
-<!-- ===== HEADER ===== -->
 <header>
   <div class="logo">Gia đình bác sĩ</div>
   <nav>
@@ -169,57 +196,60 @@
   </nav>
 </header>
 
-<!-- ===== GIỚI THIỆU ===== -->
 <section class="section profile" id="gioithieu">
-  <img src="avatar.jpg" alt="Ảnh đại diện">
+  <img src="avatar.jpg" alt="Ảnh đại diện Gia đình bác sĩ">
   <h2>Thành Nhân – Thúy Vi</h2>
   <p>Gia đình bác sĩ · Chia sẻ tài liệu & kiến thức y khoa</p>
+  <p style="font-size:14px;color:#666;margin-top:6px;">
+    Chia sẻ miễn phí – phi lợi nhuận – vì cộng đồng y khoa
+  </p>
 </section>
 
-<!-- ===== TÀI LIỆU ===== -->
-<section class="section" id="tailieu">
+<section class="section docs" id="tailieu">
   <h2>📚 Tài liệu học tập</h2>
 
   <div class="links">
-    <a href="https://padlet.com/vothanhnhanmed98/128-v-n-l-m-s-ng-x48tzoyyutdel665" target="_blank">
-      <i class="fa-solid fa-folder-open"></i> 128 Vấn đề lâm sàng
+    <a class="link-padlet" href="https://padlet.com/vothanhnhanmed98/128-v-n-l-m-s-ng-x48tzoyyutdel665" target="_blank" rel="noopener noreferrer">
+      <i class="fa-solid fa-folder-open"></i>
+      128 Vấn đề lâm sàng
     </a>
 
-    <a href="https://drive.google.com/drive/folders/1-F19fUmIWaMUzJAB0ceVc45fywtyo0bS" target="_blank">
-      <i class="fa-brands fa-google-drive"></i> Drive hình ảnh
+    <a class="link-drive" href="https://drive.google.com/drive/folders/1-F19fUmIWaMUzJAB0ceVc45fywtyo0bS" target="_blank" rel="noopener noreferrer">
+      <i class="fa-brands fa-google-drive"></i>
+      Drive hình ảnh
     </a>
 
-    <a href="https://drive.google.com/drive/folders/1U7HdGPexuVDBuJv9YUn_5GSrns-8kd_x" target="_blank">
-      <i class="fa-solid fa-book"></i> Tài liệu ĐH – SDH
+    <a class="link-docs" href="https://drive.google.com/drive/folders/1U7HdGPexuVDBuJv9YUn_5GSrns-8kd_x" target="_blank" rel="noopener noreferrer">
+      <i class="fa-solid fa-book"></i>
+      Tài liệu ĐH – SDH
     </a>
-    <a href="https://onedrive.live.com/personal/068b5cd22cc52fa7/_layouts/15/Doc.aspx?sourcedoc={0f9dfaea-9d73-478d-a768-00f0313d1f6d}&action=edit&redeem=aHR0cHM6Ly8xZHJ2Lm1zL28vYy8wNjhiNWNkMjJjYzUyZmE3L0lnRHEtcDBQYzUyTlI2ZG9BUEF4UFI5dEFZSi1sdU5nWlJYQzBVeWZTdk90Z2JvP2U9ZmVpb3B4&wd=target%28Ph%E1%BA%A7n%20Ch%C6%B0a%20c%C3%B3%20t%C3%AAn.one%7C%2FTrang%20ch%C6%B0a%20%C4%90%C4%83%CC%A3t%20t%C3%AAn%7C81349325-6afa-44c4-af6e-61d4faf202ee%2F%29&wdorigin=NavigationUrl" target="_blank">
-    <i class="fa-solid fa-note-sticky"></i> Tài liệu OneNote
-  </a>
+
+    <a class="link-onenote" href="https://onedrive.live.com/" target="_blank" rel="noopener noreferrer">
+      <i class="fa-solid fa-note-sticky"></i>
+      Tài liệu OneNote
+    </a>
   </div>
 </section>
 
-<!-- ===== GỬI TÀI LIỆU ===== -->
-<section class="section" id="gui">
+<section class="section upload" id="gui">
   <h2>📤 Gửi tài liệu</h2>
   <p>Bạn có tài liệu hay? Hãy chia sẻ để cùng nhau học tập.</p>
 
-  <!-- ĐỔI LINK GOOGLE FORM CỦA BẠN -->
-  <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeFr8eYBnnZ3nfd7fNo_7oi6lgDYPjJ3irpUxEzQHfdSsswWg/viewform?usp=publish-editor" target="_blank">
+  <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeFr8eYBnnZ3nfd7fNo_7oi6lgDYPjJ3irpUxEzQHfdSsswWg/viewform" target="_blank" rel="noopener noreferrer">
     Gửi tài liệu ngay
   </a>
 </section>
 
-<!-- ===== QR + LIÊN HỆ ===== -->
-<section class="section" id="lienhe">
+<section class="section contact" id="lienhe">
   <h2>📬 Liên hệ & truy cập nhanh</h2>
 
   <div class="qr-box">
     <p>Quét QR để mở website</p>
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://medteam.vn" alt="QR code">
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://vothanhnhanmed98-oss.github.io/giadinhbacsi/" alt="QR code website">
   </div>
 
-  <p style="margin-top:16px;">
-    <a class="btn" href="https://www.facebook.com/vo.thanh.nhan.623473/" target="_blank">
+  <p style="margin-top:18px; text-align:center;">
+    <a class="btn" href="https://www.facebook.com/vo.thanh.nhan.623473/" target="_blank" rel="noopener noreferrer">
       Facebook liên hệ
     </a>
   </p>
